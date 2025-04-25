@@ -17,7 +17,10 @@ const geistMono = Geist_Mono({
 // ✅ 사이트 제목 및 설명 설정
 export const metadata: Metadata = {
   title: "날짜 계산기 사이트",
-  description: "시작일 기준으로 날짜 차이, 며칠 후/전 날짜를 계산하는 간단한 웹 도구입니다.",
+  description: "날짜 차이 계산, 특정한 날과 특정한 날까지의 날짜 차이 계산, 며칠 후 날짜 계산, 며칠 전 날짜 계산이 가능해요.",
+  icons: {
+    icon: "/favicon.ico", // 또는 "/icon.png"
+  },
 };
 
 export default function RootLayout({
