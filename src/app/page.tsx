@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6 text-black">📆 날짜 계산기</h1>
+      <h1 className="text-3xl font-bold mb-6 text-black">📆 날짜 계산기 📆</h1>
       <div className="flex gap-2 mb-6">
         <button onClick={() => setActiveTab('diff')} className={`px-4 py-2 rounded ${activeTab === 'diff' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>일수 계산</button>
         <button onClick={() => setActiveTab('future')} className={`px-4 py-2 rounded ${activeTab === 'future' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>며칠 후</button>
@@ -46,7 +46,7 @@ function DateDiff() {
           시작일 포함
         </label>
         <button onClick={handleCalc} className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">일수 계산하기</button>
-        {result !== null && <p className="text-center mt-4">총 {result}일</p>}
+        {result !== null && <p className="text-center mt-4 text-black">👉 총 {result}일 👈</p>}
       </div>
     </div>
   );
@@ -76,7 +76,7 @@ function FutureDate() {
           시작일 포함
         </label>
         <button onClick={handleCalc} className="bg-green-500 text-white p-2 rounded hover:bg-green-600">날짜 계산하기</button>
-        {result && <p className="text-center mt-4">👉 {result}</p>}
+        {result && <p className="text-center mt-4 text-black">👉 {result} 👈</p>}
       </div>
     </div>
   );
@@ -106,7 +106,7 @@ function PastDate() {
           시작일 포함
         </label>
         <button onClick={handleCalc} className="bg-red-500 text-white p-2 rounded hover:bg-red-600">날짜 계산하기</button>
-        {result && <p className="text-center mt-4">👉 {result}</p>}
+        {result && <p className="text-center mt-4 text-black">👉 {result} 👈</p>}
       </div>
     </div>
   );
