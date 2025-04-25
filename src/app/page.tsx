@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6">📆 날짜 계산기</h1>
+      <h1 className="text-3xl font-bold mb-6 text-black">📆 날짜 계산기</h1>
       <div className="flex gap-2 mb-6">
         <button onClick={() => setActiveTab('diff')} className={`px-4 py-2 rounded ${activeTab === 'diff' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>일수 계산</button>
         <button onClick={() => setActiveTab('future')} className={`px-4 py-2 rounded ${activeTab === 'future' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>며칠 후</button>
@@ -37,11 +37,11 @@ function DateDiff() {
 
   return (
     <div className="bg-white p-6 rounded shadow w-full max-w-md">
-      <h2 className="text-xl font-semibold mb-4">일수 계산기</h2>
+      <h2 className="text-xl font-semibold mb-4 text-black">일수 계산기</h2>
       <div className="flex flex-col gap-4">
-        <input type="date" value={start} onChange={e => setStart(e.target.value)} className="border p-2 rounded" />
-        <input type="date" value={end} onChange={e => setEnd(e.target.value)} className="border p-2 rounded" />
-        <label className="flex items-center gap-2">
+        <input type="date" value={start} onChange={e => setStart(e.target.value)} className="border p-2 rounded text-black placeholder-gray-500" />
+        <input type="date" value={end} onChange={e => setEnd(e.target.value)} className="border p-2 rounded text-black placeholder-gray-500" />
+        <label className="flex items-center gap-2 text-black">
           <input type="checkbox" checked={includeStart} onChange={e => setIncludeStart(e.target.checked)} />
           시작일 포함
         </label>
@@ -67,11 +67,11 @@ function FutureDate() {
 
   return (
     <div className="bg-white p-6 rounded shadow w-full max-w-md">
-      <h2 className="text-xl font-semibold mb-4">며칠 후 날짜 계산</h2>
+      <h2 className="text-xl font-semibold mb-4 text-black">며칠 후 날짜 계산</h2>
       <div className="flex flex-col gap-4">
-        <input type="date" value={start} onChange={e => setStart(e.target.value)} className="border p-2 rounded" />
-        <input type="number" value={days} onChange={e => setDays(parseInt(e.target.value))} className="border p-2 rounded" placeholder="일수 입력" />
-        <label className="flex items-center gap-2">
+        <input type="date" value={start} onChange={e => setStart(e.target.value)} className="border p-2 rounded text-black placeholder-gray-500" />
+        <input type="number" value={days} onChange={e => setDays(parseInt(e.target.value))} className="border p-2 rounded text-black placeholder-gray-500" placeholder="0" />
+        <label className="flex items-center gap-2 text-black">
           <input type="checkbox" checked={includeStart} onChange={e => setIncludeStart(e.target.checked)} />
           시작일 포함
         </label>
@@ -97,11 +97,11 @@ function PastDate() {
 
   return (
     <div className="bg-white p-6 rounded shadow w-full max-w-md">
-      <h2 className="text-xl font-semibold mb-4">며칠 전 날짜 계산</h2>
+      <h2 className="text-xl font-semibold mb-4 text-black">며칠 전 날짜 계산</h2>
       <div className="flex flex-col gap-4">
-        <input type="date" value={start} onChange={e => setStart(e.target.value)} className="border p-2 rounded" />
-        <input type="number" value={days} onChange={e => setDays(parseInt(e.target.value))} className="border p-2 rounded" placeholder="일수 입력" />
-        <label className="flex items-center gap-2">
+        <input type="date" value={start} onChange={e => setStart(e.target.value)} className="border p-2 rounded text-black placeholder-gray-500" />
+        <input type="number" value={days} onChange={e => setDays(parseInt(e.target.value))} className="border p-2 rounded text-black placeholder-gray-500" placeholder="0" />
+        <label className="flex items-center gap-2 text-black">
           <input type="checkbox" checked={includeStart} onChange={e => setIncludeStart(e.target.checked)} />
           시작일 포함
         </label>
