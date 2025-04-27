@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "날짜 차이 계산, 특정한 날과 특정한 날까지의 날짜 차이 계산, 며칠 후 날짜 계산, 며칠 전 날짜 계산이 가능해요.",
   keywords: ["날짜 계산기", "날짜 계산기 사이트", "일수 계산기", "며칠 후 날짜", "며칠 전 날짜", "두 날짜 차이 계산"],
   icons: {
-    icon: "/favicon-16x16.png",
+    icon: "/favicon-32x32.png",
   },
   other: {
     "google-site-verification": "EoQ4-Bd1Mx2zZ1IJnhObp7lqwqD6No62hzZUh8Cxtk0",
