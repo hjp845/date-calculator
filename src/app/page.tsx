@@ -9,18 +9,35 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-6 text-black">📆 날짜 계산기 📆</h1>
+      
       <div className="flex gap-2 mb-6">
-        <button onClick={() => setActiveTab('diff')} className={`px-4 py-2 rounded ${activeTab === 'diff' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>일수 계산</button>
-        <button onClick={() => setActiveTab('future')} className={`px-4 py-2 rounded ${activeTab === 'future' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>며칠 후</button>
-        <button onClick={() => setActiveTab('past')} className={`px-4 py-2 rounded ${activeTab === 'past' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>며칠 전</button>
+        <button onClick={() => setActiveTab('diff')} className={`px-4 py-2 rounded ${activeTab === 'diff' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>
+          일수 계산
+        </button>
+        <button onClick={() => setActiveTab('future')} className={`px-4 py-2 rounded ${activeTab === 'future' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>
+          며칠 후
+        </button>
+        <button onClick={() => setActiveTab('past')} className={`px-4 py-2 rounded ${activeTab === 'past' ? 'bg-blue-500 text-white' : 'bg-white border'}`}>
+          며칠 전
+        </button>
       </div>
 
-      {activeTab === 'diff' && <DateDiff />}
-      {activeTab === 'future' && <FutureDate />}
-      {activeTab === 'past' && <PastDate />}
+      {/* 계산 기능 */}
+      <div className="w-full flex justify-center">
+        {activeTab === 'diff' && <DateDiff />}
+        {activeTab === 'future' && <FutureDate />}
+        {activeTab === 'past' && <PastDate />}
+      </div>
+
+      {/* 하단 설명 문구 */}
+      <div className="mt-12 text-center text-gray-700 text-base">
+        <p>이 날짜 계산기를 통해 시작일과 종료일 사이의 날짜 차이를 계산할 수 있습니다.</p>
+        <p>또한 며칠 후, 며칠 전 날짜를 쉽게 확인할 수 있는 실용적인 날짜 계산기입니다.</p>
+      </div>
     </main>
   );
 }
+
 
 function DateDiff() {
   const [start, setStart] = useState('');
